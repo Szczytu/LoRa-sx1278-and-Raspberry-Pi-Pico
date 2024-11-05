@@ -1,6 +1,7 @@
 # LoRa-sx1278-and-Raspberry-Pi-Pico
 
 Building an IoT system using LoRA-02 sx1278 and RPi Pico modules
+
 What you need:
 - Raspberry Pi Pico W - the main station (server) and host of the HTTP site,
 - Raspberry Pi Pico - client receiving temperature and humidity information, 
