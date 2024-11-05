@@ -30,13 +30,25 @@ Start Visual Studio Code, and then open the folder - Raspberry Pi Pico W program
 </p>
 
  
-Wgraj program klikając prawym przyciskiem myszy na plik main.py, a następnie wybierz opcję „Upload project to Pico”.
- 
-Aby uruchamiać kolejne zmiany w kodzie używaj szybkiego paska dostępu i pozycji „Run”.
-Po uruchomieniu programu odczytaj z pozycji terminalu IP, na którym została utworzona strona HTTP.
- 
-Otwórz przeglądarkę i wpisz IP utworzonej strony HTTP na serwerze RPi Pico W – 192.168.1.35. Powinna ukazać się strona z 2 wskaźnikami jak poniżej:
- 
+Upload the program by right-clicking on the main.py file and then selecting "Upload project to Pico".
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cb3df6a1-f3b2-46d5-89bd-c181b2f0acb2">
+</p>
+
+To run next changes in the code, use the quick access bar and the "Run" item. After running the program, read from the terminal IP position on which the HTTP page was created.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b7cb966c-f053-4566-a665-5ae8ed75f917">
+</p>
+
+Open a browser and type the IP of the created HTTP page on the RPi Pico W server - 192.168.1.35. A page with 2 indicators as below should appear:
+
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/6254e387-a1c7-4b79-93b0-894c396c6fd1">
+</p>
+
+
 Kolejnym krokiem będzie uruchomienie klienta. Nie rozłączaj RPi Pico W z serwerem ani nie zamykaj VSC. Uruchom kolejne okno Visual Studio Code, a następnie otwórz folder - Opracowane ćwiczenia z elektroniki\Raspberry Pi Pico\Ćw.8 System IoT z LoRa sx1278 i Raspberry Pi Pico\Program Raspberry Pi Pico - klient
 Otwórz plik main.py oraz ulora.py aby skonfigurować mape połączeń LoRa sx1278 z Raspberry Pi Pico. W pliku main.py w sekcji „# Lora Parameters” ustaw pin RST (reset), pin CS (chip select - NSS), INT (interrupt np. DIO0), ustaw odpowiednią częstotliwość oraz odpowiednią konfigurację klasy SPIConfig – aby skonfigurować interfejs SPI wejdź w bibliotekę „ulora.py”, a następnie znajdź klasę „class SPIConfig()”. Skonfiguruj piny w krotce według opisu tj. channel, sck, mosi, miso. Ostatnim krokiem jest zaimplementowanie czujnika temperatury i wilgotności. 
  
