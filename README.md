@@ -1,30 +1,34 @@
-# LoRa-sx1278-and-Raspberry-Pi-Pico
+# LoRa-RA-02-sx1278-and-Raspberry-Pi-Pico
 
-Building an IoT system using LoRA-02 sx1278 and RPi Pico modules
+Building an IoT system using LoRa Module RA-02 SX1278 433MHz and RPi Pico modules
 
 What you need:
 - Raspberry Pi Pico W - the main station (server) and host of the HTTP site,
 - Raspberry Pi Pico - client receiving temperature and humidity information, 
 - DHT11 - temperature and humidity sensor,
-- 2x LoRa-02 sx1278 433MHz - radio module used for communication between the client and the server
+- 2x LoRa-RA-02-sx1278 433MHz - radio module used for communication between the client and the server
 
 LoRa (Long Range) is a radio technology that is widely used in IoT (Internet of Things) systems due to its ability to transmit data over long distances with low power consumption. In the exercise, LoRa plays a key role in wireless communication between the client and the server. The client reads data from a temperature and humidity sensor and then transmits it to the server using the LoRa SX1278 module. The server receives this data and makes it available in the form of a web page accessible via Wi-Fi. 
-Lora is part of the LPWAN (Low Power Wide Area Network) category operating 
-in the unlicensed radio band. It is characterized by low power consumption and long range - up to several kilometers. The data transmission speed for LoRa ranges from a few to several hundred kilobits per second, which is sufficient for transmitting simple information such as temperature or humidity readings in IoT systems.
+Lora is part of the LPWAN (Low Power Wide Area Network) category operating in the unlicensed radio band. It is characterized by low power consumption and long range - up to several kilometers. The data transmission speed for LoRa ranges from a few to several hundred kilobits per second, which is sufficient for transmitting simple information such as temperature or humidity readings in IoT systems.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3405cf24-dfea-46d8-a754-6094823ddef1">
 </p>
  
-LoRa wyróżnia się przede wszystkim:
-•	Długim zasięgiem transmisji, nawet do kilkunastu kilometrów, co sprawia, że jest idealna do zastosowań IoT, gdzie urządzenia mogą być rozmieszczone w znacznej odległości od siebie.
-•	Niskim poborem mocy, co pozwala na długą żywotność urządzeń zasilanych bateryjnie, co jest istotne w systemach IoT, gdzie energooszczędność jest kluczowa.
-•	Dobrą odpornością na zakłócenia, co zapewnia stabilną transmisję nawet w trudnych warunkach środowiskowych.
-Dzięki niskim kosztom oraz możliwości długodystansowej transmisji, LoRa znajduje zastosowanie w aplikacjach, gdzie potrzeba przesyłać niewielkie ilości danych z urządzeń rozmieszczonych na dużych obszarach, jak na przykład w monitoringu środowiskowym, rolnictwie czy inteligentnym mieście.
+LoRa is distinguished primarily by:
+- Long transmission range, up to several kilometers, which makes it ideal for IoT applications where devices may be located at a considerable distance from each other.
+- Low power consumption, allowing long life of battery-powered devices, which is important in IoT systems where energy efficiency is key.
+- Good immunity to interference, which ensures stable transmission even in harsh environments.
+Thanks to its low cost and long-distance transmission capability, LoRa is used in applications where small amounts of data need to be transmitted from devices distributed over large areas, such as in environmental monitoring, agriculture and smart city.
 
+# How to start an IoT system
 
-Uruchom Visual Studio Code, a następnie otwórz folder - Opracowane ćwiczenia z elektroniki\Raspberry Pi Pico\Ćw.8 System IoT z LoRa sx1278 i Raspberry Pi Pico\Program Raspberry Pi Pico W - serwer
-Otwórz plik main.py oraz ulora.py aby skonfigurować mape połączeń LoRa sx1278 z Raspberry Pi Pico W. W pliku main.py w sekcji „# Lora Parameters” ustaw pin RST (reset), pin CS (chip select - NSS), INT (interrupt np. DIO0), ustaw odpowiednią częstotliwość oraz odpowiednią konfigurację klasy SPIConfig – aby skonfigurować interfejs SPI wejdź w bibliotekę „ulora.py”, a następnie znajdź klasę „class SPIConfig()”. Skonfiguruj piny w krotce według opisu tj. channel, sck, mosi, miso. Ostatnim krokiem przed uruchomieniem programu jest uzupełnienie SSID oraz PASSWORD w funkcji do połączenia z WiFi. Przy ustalaniu pinów przy interfejsie SPI należy korzystać z pinout Raspberry Pi Pico aby wykorzystać odpowiednie piny (np. SPI0 sck należy połączyć z sck LoRa, pin NSS tutaj to pin CS)!
+Start Visual Studio Code, and then open the folder - Raspberry Pi Pico W program - server Open the main.py file and ulora.py file to configure the LoRa sx1278 connection map with Raspberry Pi Pico W. In the main.py file in the “# Lora Parameters” section, set the RST (reset) pin, CS (chip select - NSS) pin, INT (interrupt eg. DIO0), set the appropriate frequency and the appropriate configuration of the SPIConfig class - to configure the SPI interface, enter the “ulora.py” library, then find the “class SPIConfig()” class. Configure the pins in the tuple according to the description, i.e. channel, sck, mosi, miso. The last step before running the program is to complete the SSID and PASSWORD in the function to connect to WiFi. When setting up the pins at the SPI interface, use the Raspberry Pi Pico pinout to use the appropriate pins (e.g. SPI0 sck should be connected to LoRa's sck, the NSS pin here is the CS pin)!
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e9c4ae54-95f7-48a5-b9be-bb539ff9038a">
+</p>
+
  
 Wgraj program klikając prawym przyciskiem myszy na plik main.py, a następnie wybierz opcję „Upload project to Pico”.
  
