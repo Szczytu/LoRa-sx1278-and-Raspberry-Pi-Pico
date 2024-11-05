@@ -62,7 +62,7 @@ class ModemConfig():
 
 class SPIConfig():
     # spi pin defs for various boards (channel, sck, mosi, miso)
-    rp2_0 = (...)
+    rp2_0 = (0, 2, 3, 0)
     rp2_1 = (1, 10, 11, 8)
     esp8286_1 = (1, 14, 13, 12)
     esp32_1 = (1, 14, 13, 12)
