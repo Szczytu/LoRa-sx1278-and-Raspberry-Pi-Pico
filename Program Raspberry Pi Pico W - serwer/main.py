@@ -8,11 +8,11 @@ import re
 sensor_data = {"temperature": 0, "humidity": 0}
 
 # Lora Parameters
-SX1278_RST = ...
+SX1278_RST = 4
 CONFIG_SPIBUS = SPIConfig.rp2_0
-SX1278_CS = ...
-SX1278_INT = ...
-SX1278_FREQ = ...
+SX1278_CS = 1
+SX1278_INT = 5
+SX1278_FREQ = 433
 SX1278_POW = 15
 CLIENT_ADDRESS = 1
 SERVER_ADDRESS = 2
