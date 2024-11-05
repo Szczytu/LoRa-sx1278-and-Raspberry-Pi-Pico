@@ -49,26 +49,34 @@ Open a browser and type the IP of the created HTTP page on the RPi Pico W server
 </p>
 
 
-Kolejnym krokiem będzie uruchomienie klienta. Nie rozłączaj RPi Pico W z serwerem ani nie zamykaj VSC. Uruchom kolejne okno Visual Studio Code, a następnie otwórz folder - Opracowane ćwiczenia z elektroniki\Raspberry Pi Pico\Ćw.8 System IoT z LoRa sx1278 i Raspberry Pi Pico\Program Raspberry Pi Pico - klient
-Otwórz plik main.py oraz ulora.py aby skonfigurować mape połączeń LoRa sx1278 z Raspberry Pi Pico. W pliku main.py w sekcji „# Lora Parameters” ustaw pin RST (reset), pin CS (chip select - NSS), INT (interrupt np. DIO0), ustaw odpowiednią częstotliwość oraz odpowiednią konfigurację klasy SPIConfig – aby skonfigurować interfejs SPI wejdź w bibliotekę „ulora.py”, a następnie znajdź klasę „class SPIConfig()”. Skonfiguruj piny w krotce według opisu tj. channel, sck, mosi, miso. Ostatnim krokiem jest zaimplementowanie czujnika temperatury i wilgotności. 
- 
-Rys. 6.6 czujnik DHT11
-W zależności jaki czujnik będzie dostępny oraz jakie ma wyprowadzenia podłącz go zgodnie z dokumentacją tj. zasilanie, masa oraz pin data. Na rys. 6.6 przedstawiono przykładowy czujnik DHT11 z jego wyprowadzeniami. W kodzie programu znajdź informację do którego pinu trzeba podłączyć pin DATA czujnika – oczywiście można to edytować.
-Po podłączeniu oraz konfiguracji należy podłączyć Raspberry Pi Pico – klienta do portu COM przy użyciu usb. Należy pamiętać aby każde urządzenie podłączać z nowo otwartym VSC aby program rozróżniał porty COM i nie odmawiał dostępu.
-Kroki postępowania gdy coś się zwiesi lub wyrzuci jakiś błąd:
-1.	Zamknij wszystkie okna z VSC
-2.	Odłącz wszystkie porty COM podłączone do RPi Pico (USB)
-3.	Uruchom 1 okno VSC, a następnie otwórz folder z plikami Ćw.8 System IoT z LoRa sx1278 i Raspberry Pi Pico W – serwer
-4.	Podłącz Raspberry Pi Pico W – serwer do zasilania poprzez port COM (USB)
-5.	Uruchom program main.py na serwerze
-6.	Uruchom 2 okno VSC, a następnie otwórz folder z plikami Ćw.8 System IoT z LoRa sx1278 i Raspberry Pi Pico – klient
-7.	Podłącz Raspberry Pi Pico  – klient do zasilania poprzez port COM (USB)
-8.	Uruchom program main.py na kliencie
+The next step will be to start the client. Do not disconnect RPi Pico W from the server or close VSC. Start another Visual Studio Code window, then open the folder - Developed electronics exercises\Raspberry Pi Pico\Exercise 8 IoT system with LoRa sx1278 and Raspberry Pi Pico\Raspberry Pi Pico program - client
+Open the main.py and ulora.py files to configure the LoRa sx1278 connection map with Raspberry Pi Pico. In the main.py file in the "# Lora Parameters" section, set the RST pin (reset), CS pin (chip select - NSS), INT (interrupt e.g. DIO0), set the appropriate frequency and the appropriate SPIConfig class configuration - to configure the SPI interface, go to the "ulora.py" library, then find the "class SPIConfig()" class. Configure the pins in the tuple according to the description, i.e. channel, sck, mosi, miso. The last step is to implement the temperature and humidity sensor.
 
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/bf424335-39e5-4c4b-818d-30b9e84ca8bd">
+</p>
 
+Depending on which sensor will be available and what pins it has, connect it according to the documentation, i.e. power supply, ground and data pin. Fig. 6.6 shows an example of a DHT11 sensor with its pins. In the program code, find information about which pin to connect the sensor's DATA pin to - of course, you can edit it.
 
-Wygląd strony gdy klient wysyła informację do serwera:
- 
-Potestuj działanie programu oraz strony. Przytrzymaj w palcach czujnik temperatury – zaobserwuj działanie projektu. Spróbuj pozmieniać czasy opóźnień w programach. Edytuj stronę HTTP – plik index.html na serwerze według uznania. Zmień np. wykresy, wielkości czcionek ich kolory, spróbuj pododawać/edytować style css itd. Zmień częstotliwość LoRa – zaobserwuj zmiany w wysyłaniu i odbieraniu pakietów. Jeśli jest możliwość przetestuj zasięg działania systemu oraz zmienną SX1278_POW i jej wpływ na zasięg. Każdą zmianę w plikach np. konfigurowanie strony – plik index.html należy wysłać do pamięci pico „Upload project to Pico”.
- 
-Rys. 6.7 System IoT z wykorzystaniem modułów LoRA-02 sx1278 oraz RPi Pico
+After connecting and configuring, connect the Raspberry Pi Pico - client to the COM port using USB. Remember to connect each device with a newly opened VSC so that the program distinguishes COM ports and does not deny access.
+Steps to follow when something hangs or throws an error:
+1. Close all windows from VSC
+2. Disconnect all COM ports connected to RPi Pico (USB)
+3. Start 1 VSC window, then open the folder with the files Ćw.8 IoT System with LoRa sx1278 and Raspberry Pi Pico W – server
+4. Connect Raspberry Pi Pico W – server to the power supply via COM port (USB)
+5. Start the main.py program on the server
+6. Start 2 VSC window, then open the folder with the files Ćw.8 IoT System with LoRa sx1278 and Raspberry Pi Pico – client
+7. Connect Raspberry Pi Pico – client to the power supply via COM port (USB)
+8. Start the main.py program on the client
+
+The appearance of the page when the client sends information to the server:
+
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/75ed2be2-8fac-42d3-b6e6-cb7cc21920a3">
+</p>
+
+Test the operation of the program and the page. Hold the temperature sensor in your fingers – observe the operation of the project. Try changing the delay times in the programs. Edit the HTTP page – index.html file on the server as you see fit. Change, for example, the graphs, font sizes, colors, try adding/editing css styles, etc. Change the LoRa frequency – observe the changes in sending and receiving packets. If possible, test the range of the system and the SX1278_POW variable and its effect on the range. Each change in the files, e.g. page configuration – index.html file should be sent to the pico memory “Upload project to Pico”.
+
+ <p align="center">
+  <img src="https://github.com/user-attachments/assets/4679aacd-4468-4265-bbfa-2a274a0c25e7">
+</p>
