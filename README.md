@@ -49,7 +49,9 @@ The last step before running the program is to complete the SSID and PASSWORD in
   <img src="https://github.com/user-attachments/assets/e9c4ae54-95f7-48a5-b9be-bb539ff9038a">
 </p>
 
- 
+> [!IMPORTANT]
+> To upload the program you need some IDE environment, e.g. Thonny or Virtual Studio Code (VSC need extension MiroPico)
+
 Upload the program by right-clicking on the main.py file and then selecting "Upload project to Pico".
 
 <p align="center">
