@@ -12,7 +12,9 @@ The client reads data from a temperature and humidity sensor and then transmits 
 
 ## How connect LoRa RA-02 SX1278 and RPi Pico?
 
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a754f244-dce3-4923-bcb5-26a1d2cc0146">
+</p>
 
 ## What is LoRa?
 
