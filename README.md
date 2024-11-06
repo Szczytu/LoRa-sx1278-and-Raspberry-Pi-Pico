@@ -61,7 +61,7 @@ Upload the program by right-clicking on the main.py file and then selecting "Upl
 To run next changes in the code, use the quick access bar and the "Run" item. After running the program, read from the terminal IP position on which the HTTP page was created.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4e556274-0820-4c12-ae1c-9b4851af4758">
+  <img src="https://github.com/user-attachments/assets/f3f22717-ffc4-4fd5-b47d-4a2c244760af">
 </p>
 
 Open a browser and type the IP of the created HTTP page on the RPi Pico W server - 192.168.1.35. A page with 2 indicators as below should appear:
@@ -71,17 +71,26 @@ Open a browser and type the IP of the created HTTP page on the RPi Pico W server
 </p>
 
 
-The next step will be to start the client. Do not disconnect RPi Pico W from the server or close VSC. Start another Visual Studio Code window, then open the folder - Developed electronics exercises\Raspberry Pi Pico\Exercise 8 IoT system with LoRa sx1278 and Raspberry Pi Pico\Raspberry Pi Pico program - client
-Open the main.py and ulora.py files to configure the LoRa sx1278 connection map with Raspberry Pi Pico. In the main.py file in the "# Lora Parameters" section, set the RST pin (reset), CS pin (chip select - NSS), INT (interrupt e.g. DIO0), set the appropriate frequency and the appropriate SPIConfig class configuration - to configure the SPI interface, go to the "ulora.py" library, then find the "class SPIConfig()" class. Configure the pins in the tuple according to the description, i.e. channel, sck, mosi, miso. The last step is to implement the temperature and humidity sensor.
+The next step will be to start the client. **Do not** disconnect RPi Pico W from the server or close VSC.
+
+Start another **Visual Studio Code window**, then open the folder - **Raspberry Pi Pico program - client**
+
+Open the main.py file and ulora.py file to configure the LoRa sx1278 connection map with Raspberry Pi Pico. 
+
+In the main.py file in the **“# Lora Parameters”** section, set the **RST** (reset) pin, **CS** (chip select - NSS) pin, **INT** (interrupt eg. DIO0), set the appropriate frequency and the appropriate configuration of the SPIConfig class - to configure the SPI interface. 
+
+Enter the “ulora.py” library, then find the **“class SPIConfig()”** class. Configure the pins in the tuple according to the description, i.e. **channel, sck, mosi, miso**. 
+
+The last step is to implement the temperature and humidity sensor.
 
  <p align="center">
   <img src="https://github.com/user-attachments/assets/bf424335-39e5-4c4b-818d-30b9e84ca8bd">
 </p>
 
-Depending on which sensor will be available and what pins it has, connect it according to the documentation, i.e. power supply, ground and data pin. Fig. 6.6 shows an example of a DHT11 sensor with its pins. In the program code, find information about which pin to connect the sensor's DATA pin to - of course, you can edit it.
-
 After connecting and configuring, connect the Raspberry Pi Pico - client to the COM port using USB. Remember to connect each device with a newly opened VSC so that the program distinguishes COM ports and does not deny access.
+
 Steps to follow when something hangs or throws an error:
+
 1. Close all windows from VSC
 2. Disconnect all COM ports connected to RPi Pico (USB)
 3. Start 1 VSC window, then open the folder with the files Ćw.8 IoT System with LoRa sx1278 and Raspberry Pi Pico W – server
