@@ -5,10 +5,10 @@ Building an IoT system using LoRa Module RA-02 SX1278 433MHz and RPi Pico module
 The client reads data from a temperature and humidity sensor and then transmits it to the server using the LoRa SX1278 module. The server receives this data and makes it available on the website created in the network to which the RPi W server is connected.
 
 ## What you need:
-- Raspberry Pi Pico W - the main station (server) and host of the HTTP site,
-- Raspberry Pi Pico - client receiving temperature and humidity information, 
-- DHT11 - temperature and humidity sensor,
-- 2x LoRa-RA-02-sx1278 433MHz - radio module used for communication between the client and the server
+- **Raspberry Pi Pico W** - the main station (server) and host of the HTTP site,
+- **Raspberry Pi Pico** - client receiving temperature and humidity information, 
+- **DHT11** - temperature and humidity sensor,
+- **2x LoRa-RA-02-sx1278 433MHz** - radio module used for communication between the client and the server
 
 ## How connect LoRa RA-02 SX1278 and RPi Pico?
 
@@ -33,7 +33,11 @@ Thanks to its low cost and long-distance transmission capability, LoRa is used i
 
 # How to start an IoT system
 
-Start Visual Studio Code, and then open the folder - Raspberry Pi Pico W program - server Open the main.py file and ulora.py file to configure the LoRa sx1278 connection map with Raspberry Pi Pico W. In the main.py file in the “# Lora Parameters” section, set the RST (reset) pin, CS (chip select - NSS) pin, INT (interrupt eg. DIO0), set the appropriate frequency and the appropriate configuration of the SPIConfig class - to configure the SPI interface, enter the “ulora.py” library, then find the “class SPIConfig()” class. Configure the pins in the tuple according to the description, i.e. channel, sck, mosi, miso. The last step before running the program is to complete the SSID and PASSWORD in the function to connect to WiFi. 
+Start **Visual Studio Code**, and then open the folder - **Raspberry Pi Pico W program - serwer**.
+
+Open the main.py file and ulora.py file to configure the LoRa sx1278 connection map with Raspberry Pi Pico W. In the main.py file in the **“# Lora Parameters”** section, set the **RST** (reset) pin, **CS** (chip select - NSS) pin, **INT** (interrupt eg. DIO0), set the appropriate frequency and the appropriate configuration of the SPIConfig class - to configure the SPI interface, enter the “ulora.py” library, then find the **“class SPIConfig()”** class. Configure the pins in the tuple according to the description, i.e. **channel, sck, mosi, miso**. 
+
+The last step before running the program is to complete the SSID and PASSWORD in the function to connect to WiFi. 
 > [!IMPORTANT]
 > When setting up the pins at the SPI interface, use the Raspberry Pi Pico pinout to use the appropriate pins (e.g. SPI0 sck should be connected to LoRa's sck, the NSS pin here is the CS pin)!
 
