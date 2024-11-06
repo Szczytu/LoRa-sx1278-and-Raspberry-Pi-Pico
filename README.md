@@ -106,7 +106,11 @@ The appearance of the page when the client sends information to the server:
   <img src="https://github.com/user-attachments/assets/75ed2be2-8fac-42d3-b6e6-cb7cc21920a3">
 </p>
 
-Test the operation of the program and the page. Hold the temperature sensor in your fingers – observe the operation of the project. Try changing the delay times in the programs. Edit the HTTP page – index.html file on the server as you see fit. Change, for example, the graphs, font sizes, colors, try adding/editing css styles, etc. Change the LoRa frequency – observe the changes in sending and receiving packets. If possible, test the range of the system and the SX1278_POW variable and its effect on the range. Each change in the files, e.g. page configuration – index.html file should be sent to the pico memory “Upload project to Pico”.
+Test the operation of the program and the page. Hold the temperature sensor in your fingers.
+
+The project is an example of how to communicate LoRa modules.
+
+Now all you need to do is add the appropriate modules to your own needs and have an overview, control your own IoT system
 
  <p align="center">
   <img src="https://github.com/user-attachments/assets/071798a4-f0ec-4138-b64a-b1110a566b1a">
