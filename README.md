@@ -2,13 +2,20 @@
 
 Building an IoT system using LoRa Module RA-02 SX1278 433MHz and RPi Pico modules
 
-What you need:
+The client reads data from a temperature and humidity sensor and then transmits it to the server using the LoRa SX1278 module. The server receives this data and makes it available on the website created in the network to which the RPi W server is connected.
+
+## What you need:
 - Raspberry Pi Pico W - the main station (server) and host of the HTTP site,
 - Raspberry Pi Pico - client receiving temperature and humidity information, 
 - DHT11 - temperature and humidity sensor,
 - 2x LoRa-RA-02-sx1278 433MHz - radio module used for communication between the client and the server
 
-The client reads data from a temperature and humidity sensor and then transmits it to the server using the LoRa SX1278 module. The server receives this data and makes it available on the website created in the network to which the RPi W server is connected.
+## How connect LoRa RA-02 SX1278 and RPi Pico?
+
+
+
+## What is LoRa?
+
 Lora is part of the LPWAN (Low Power Wide Area Network) category operating in the unlicensed radio band. It is characterized by low power consumption and long range - up to several kilometers. The data transmission speed for LoRa ranges from a few to several hundred kilobits per second, which is sufficient for transmitting simple information such as temperature or humidity readings in IoT systems.
 
 <p align="center">
