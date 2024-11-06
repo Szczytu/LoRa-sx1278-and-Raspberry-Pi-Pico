@@ -109,5 +109,6 @@ The appearance of the page when the client sends information to the server:
 Test the operation of the program and the page. Hold the temperature sensor in your fingers – observe the operation of the project. Try changing the delay times in the programs. Edit the HTTP page – index.html file on the server as you see fit. Change, for example, the graphs, font sizes, colors, try adding/editing css styles, etc. Change the LoRa frequency – observe the changes in sending and receiving packets. If possible, test the range of the system and the SX1278_POW variable and its effect on the range. Each change in the files, e.g. page configuration – index.html file should be sent to the pico memory “Upload project to Pico”.
 
  <p align="center">
-  <img src="https://github.com/user-attachments/assets/4679aacd-4468-4265-bbfa-2a274a0c25e7">
+  <img src="https://github.com/user-attachments/assets/071798a4-f0ec-4138-b64a-b1110a566b1a">
 </p>
+
