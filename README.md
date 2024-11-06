@@ -55,7 +55,7 @@ The last step before running the program is to complete the SSID and PASSWORD in
 Upload the program by right-clicking on the main.py file and then selecting "Upload project to Pico".
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cb3df6a1-f3b2-46d5-89bd-c181b2f0acb2">
+  <img src="https://github.com/user-attachments/assets/ef8f6c6c-e129-4c8b-8d3d-7a5bd29c77a9">
 </p>
 
 To run next changes in the code, use the quick access bar and the "Run" item. After running the program, read from the terminal IP position on which the HTTP page was created.
