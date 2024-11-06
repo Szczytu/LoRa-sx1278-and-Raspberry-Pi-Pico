@@ -61,7 +61,7 @@ Upload the program by right-clicking on the main.py file and then selecting "Upl
 To run next changes in the code, use the quick access bar and the "Run" item. After running the program, read from the terminal IP position on which the HTTP page was created.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/89817546-fe4c-4df5-b5bf-40d80c720977">
+  <img src="https://github.com/user-attachments/assets/4e556274-0820-4c12-ae1c-9b4851af4758">
 </p>
 
 Open a browser and type the IP of the created HTTP page on the RPi Pico W server - 192.168.1.35. A page with 2 indicators as below should appear:
