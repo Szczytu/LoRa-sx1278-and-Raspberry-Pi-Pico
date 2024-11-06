@@ -14,6 +14,7 @@ The client reads data from a temperature and humidity sensor and then transmits 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a2c7dea5-71af-482e-b190-c5d318780882">
+  <img src="https://github.com/user-attachments/assets/9b2f498a-31d6-4930-a711-afccefd52f10">
 </p>
 
 ## What is LoRa?
