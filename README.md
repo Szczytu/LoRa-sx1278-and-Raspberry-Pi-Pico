@@ -113,6 +113,5 @@ The project is an example of how to communicate LoRa modules.
 Now all you need to do is add the appropriate modules to your own needs and have an overview, control your own IoT system
 
  <p align="center">
-  <img src="https://github.com/user-attachments/assets/071798a4-f0ec-4138-b64a-b1110a566b1a">
+  <img src="https://github.com/user-attachments/assets/78dd15b1-dc21-48a4-a1ba-909bca6f994d">
 </p>
-
