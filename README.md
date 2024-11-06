@@ -35,7 +35,11 @@ Thanks to its low cost and long-distance transmission capability, LoRa is used i
 
 Start **Visual Studio Code**, and then open the folder - **Raspberry Pi Pico W program - serwer**.
 
-Open the main.py file and ulora.py file to configure the LoRa sx1278 connection map with Raspberry Pi Pico W. In the main.py file in the **“# Lora Parameters”** section, set the **RST** (reset) pin, **CS** (chip select - NSS) pin, **INT** (interrupt eg. DIO0), set the appropriate frequency and the appropriate configuration of the SPIConfig class - to configure the SPI interface, enter the “ulora.py” library, then find the **“class SPIConfig()”** class. Configure the pins in the tuple according to the description, i.e. **channel, sck, mosi, miso**. 
+Open the main.py file and ulora.py file to configure the LoRa sx1278 connection map with Raspberry Pi Pico W. 
+
+In the main.py file in the **“# Lora Parameters”** section, set the **RST** (reset) pin, **CS** (chip select - NSS) pin, **INT** (interrupt eg. DIO0), set the appropriate frequency and the appropriate configuration of the SPIConfig class - to configure the SPI interface. 
+
+Enter the “ulora.py” library, then find the **“class SPIConfig()”** class. Configure the pins in the tuple according to the description, i.e. **channel, sck, mosi, miso**. 
 
 The last step before running the program is to complete the SSID and PASSWORD in the function to connect to WiFi. 
 > [!IMPORTANT]
